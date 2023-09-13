@@ -1,0 +1,45 @@
+<mat-card *ngIf="user1">
+    <h1>Your Profile Details</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" alt="" class="profile-image" />
+
+                    <h1 class="mt20"></h1>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table tr td">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{user1.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>UserId</td>
+                                <td>{{user1.userid}}</td>
+                            </tr>
+                            <tr *ngIf="user1.phone">
+                                <td>Phone</td>
+                                <td>{{user1.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user1.role}}</td>
+                            </tr>
+                            <tr>
+                                <td>STATUS</td>
+                                <td>{{user1.status}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button mat-raised-button color="accent" class="ml20">SHARE</button>
+    </mat-card-actions>
+</mat-card>

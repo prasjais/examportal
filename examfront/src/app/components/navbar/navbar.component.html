@@ -1,0 +1,26 @@
+<!-- href = it will reload the page after clicking but router link will not reload the page -->
+<mat-toolbar color="primary">
+    <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_book</mat-icon>
+    </a>
+    <span>ExamPortal</span>
+    <span class="example-spacer"></span>
+    <a 
+    *ngIf="!login.isLoggedIn()"
+    [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <h4>Login</h4>
+    </a>
+    <a
+    *ngIf="!login.isLoggedIn()" 
+    [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
+        <h4>Register</h4>
+    </a>
+    <a 
+    (click)="logout()"
+    *ngIf="login.isLoggedIn()"
+    mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <h4>Logout</h4>
+    </a>
+    
+    
+</mat-toolbar>

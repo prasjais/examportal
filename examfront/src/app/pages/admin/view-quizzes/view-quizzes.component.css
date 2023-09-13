@@ -1,0 +1,16 @@
+.mt10
+{
+    margin-top: 10px;
+}
+.mt20
+{
+    margin-top: 20px;
+}
+.ml20
+{
+    margin-left: 20px;
+}
+.example-header-image {
+    background-image: url('../../../../assets/verified.png');
+    background-size: cover;
+  }
